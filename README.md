@@ -1,89 +1,91 @@
-# Prescripto - Hospital Management System
+🏥 Prescripto | Modern Hospital Management System
+📖 Overview
+Prescripto is a scalable, full-stack Hospital Management System designed to bridge the gap between healthcare providers and patients. Built entirely on the MERN stack, it streamlines clinical workflows by offering secure authentication, real-time appointment scheduling, and dedicated administrative controls.
 
-## Description
-**Prescripto** is a comprehensive Hospital Management System built on the MERN stack to enhance hospital operations. This system includes features such as secure user authentication, efficient appointment scheduling, patient record management, and real-time communication between doctors and patients. It provides a scalable and user-friendly platform to streamline healthcare workflows and improve the hospital experience.
+This project was developed with a strong emphasis on backend security, robust session management, and efficient REST API architecture.
 
-## Features
-- **User Authentication**: Secure login for patients, doctors, and administrators.
-- **Appointment Scheduling**: Easy booking, rescheduling, and cancellation of appointments.
-- **Patient Records Management**: Store, access, and update patient health records.
-- **Doctor-Patient Communication**: Real-time messaging for consultations and follow-ups.
-- **Admin Dashboard**: Manage users, appointments, and view analytics.
-- **Secure Data Storage**: Ensure patient privacy and data security with MongoDB.
+✨ Core Features
+Role-Based Access Control: Distinct, secure portals for Patients, Doctors, and Administrators.
 
-## Tech Stack
-- **Frontend**: React.js
-- **Backend**: Node.js and Express.js
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
-- **State Management**: Redux (optional)
+Smart Appointment Engine: Seamless booking, rescheduling, and cancellation tracking.
 
-## Getting Started
-Follow these instructions to set up the project locally.
+Secure Backend Architecture: Utilizes Bcrypt for password hashing and JWT for stateless session management to prevent hijacking.
 
-### Prerequisites
-- Node.js installed
-- MongoDB installed or access to a MongoDB cloud instance
-- Git installed
+Media Management: Integrated with Cloudinary for scalable profile and medical image handling.
 
-### Installation
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/Prescripto-Hospital_Management_System.git
-   cd Prescripto-Hospital_Management_System
+Admin Dashboard: Centralized control for managing medical staff, patient records, and system analytics.
 
-## Install dependencies
+🛠️ Tech Stack
+Frontend/Admin Panel: React.js powered by Vite for lightning-fast HMR and optimized builds.
 
-1. **Install admin dependencies**
-   ```bash
-   cd admin
-   npm install
-   ```
+Backend: Node.js & Express.js.
 
-2. **Install frontend dependencies**
-   ```bash
-   cd frontend
-   npm install
-   ```
+Database: MongoDB (Atlas) for flexible, document-based data storage.
 
-3. **Set up environment variables**
-   In the server directory, create a .env file with the following:
+Authentication & Security: JSON Web Tokens (JWT) & Bcrypt.
 
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   Run the application
+File Uploads: Multer & Cloudinary API.
 
-4. **Start server:**
-   ```bash
-   cd backend
-   npm run server
-   ```
+🚀 Getting Started
+Follow these steps to run the complete monorepo setup locally.
 
-5. **Start Admin Panel:**
-   ```bash
-   cd admin
-   npm run dev
-   ```
+1. Clone the Repository
+Bash
+git clone https://github.com/yourusername/prescripto.git
+cd prescripto
+2. Environment Configuration
+You must configure three separate .env files for the system to communicate properly.
 
-6. **Start Frontend Panel:**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+Backend (backend/.env)
 
-# Topics
-Hospital Management, MERN Stack, MongoDB, Express.js, React, Node.js, Healthcare App, Patient Records, Appointments.
+Code snippet
+PORT=5000
+MONGODB_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_secure_random_string
 
-# Contributors
+# Admin Portal Access
+ADMIN_EMAIL=admin@prescripto.com
+ADMIN_PASSWORD=your_secure_password
 
+# Cloudinary Integration
+CLOUDINARY_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_SECRET_KEY=your_secret_key
+Frontend (frontend/.env) & Admin (admin/.env)
 
-# Deployment Links
-[Prescripto Backend](https://prescriptobackend-4ylq.onrender.com)
+Code snippet
+VITE_BACKEND_URL='http://localhost:5000'
+3. Install Dependencies & Run
+Since this project uses a monorepo structure, you will need to open three separate terminal windows.
 
-[Prescripto Patient Panel](https://prescripto-hospital-management-system.vercel.app/)
+Terminal 1: Start the Backend API
 
-[Prescripto Admin/Doctor Panel](https://prescripto-hospital-management-system-c29o.vercel.app/)
+Bash
+cd backend
+npm install
+npm run server
+Terminal 2: Start the Admin Panel
 
+Bash
+cd admin
+npm install
+npm run dev
+Terminal 3: Start the Patient Frontend
 
-# License
-This project is licensed under the MIT License.
+Bash
+cd frontend
+npm install
+npm run dev
+🌐 Live Deployment
+The infrastructure is fully deployed using serverless architecture on Vercel and Render.
+
+Backend API: Prescripto API
+
+Patient Portal: Prescripto Live
+
+Admin Dashboard: Admin Live
+
+👨‍💻 Author
+Sakib Malik
+
+Focus: Backend Engineering, C++ Algorithms, & Full-Stack Architecture.
