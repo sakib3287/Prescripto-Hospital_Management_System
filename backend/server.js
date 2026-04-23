@@ -14,12 +14,21 @@ connectDB()
 connectCloudinary()
 
 // middlewares
+// ... top imports stay the same ...
+
+// middlewares
 app.use(express.json())
+
+// ... top imports stay the same ...
+
+// middlewares
+app.use(express.json())
+
 const allowedOrigins = [
-  'http://localhost:5173', // Keep local for testing
-  'http://localhost:5174', // Keep local for testing
-  'https://prescripto-hospital-management-system-pd9a.onrender.com',
-  'https://prescripto-hospital-management-system-pwsq.onrender.com'
+  'http://localhost:5173', 
+  'http://localhost:5174', 
+  'https://prescripto-hospital-management-system.vercel.app',      // ✅ Your Vercel Patient Frontend
+  'https://prescripto-hospital-management-system-c29o.vercel.app' // ✅ Your Vercel Admin Panel
 ];
 
 app.use(cors({
