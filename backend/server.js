@@ -15,7 +15,18 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors())
+const allowedOrigins = [
+  'http://localhost:5173', // Keep local for testing
+  'http://localhost:5174', // Keep local for testing
+  'https://prescripto-hospital-management-system-pd9a.onrender.com',
+  'https://prescripto-hospital-management-system-pwsq.onrender.com'
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 
 // api endpoints
 app.use("/api/user", userRouter)
